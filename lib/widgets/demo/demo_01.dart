@@ -77,10 +77,28 @@ class CheckDemo extends StatefulWidget {
 }
 
 class _CheckDemoState extends State<CheckDemo> {
-  bool _check=false;
+  bool _check = false;
+  bool _switch = false;
+
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Column(
+      children: [
+        Checkbox(
+            value: _check,
+            onChanged: (v) {
+              setState(() {
+                _check = v;
+              });
+            }),
+        Switch(
+            value: _switch,
+            onChanged: (v) {
+              setState(() {
+                _switch = v;
+              });
+            })
+      ],
+    );
   }
 }
-
