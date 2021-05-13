@@ -126,11 +126,26 @@ class ProgressDemo extends StatelessWidget {
               valueColor: AlwaysStoppedAnimation(Colors.yellow),
             ),
           ),
-          CupertinoActivityIndicator(
-
-          )
+          CupertinoActivityIndicator()
         ],
       ),
+    );
+  }
+}
+
+class ClickDemo extends StatelessWidget {
+  const ClickDemo({Key key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: () {
+        print("tag");
+      },
+      onDoubleTap: () {
+        print("double tag");
+      },
+      child: Text("data"),
     );
   }
 }
