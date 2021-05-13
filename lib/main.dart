@@ -28,7 +28,7 @@ class HomePage extends StatelessWidget {
         elevation: 10,
         centerTitle: true,
       ),
-      body: CheckDemo(),
+      body: ProgressDemo(),
     );
   }
 }
