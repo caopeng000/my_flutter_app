@@ -11,7 +11,7 @@ class LayoutDemo extends StatelessWidget {
       ),
       body: Container(
         color: Colors.grey,
-        child: WrapDemo(),
+        child: StackDemo(),
         // child: Column(
         //   children: [
         //     Container(color: Colors.red, width: 100, height: 100),
@@ -60,14 +60,42 @@ class _WrapDemoState extends State<WrapDemo> {
   Widget build(BuildContext context) {
     return Wrap(
       spacing: 10.0,
-     direction: Axis.vertical,
-     alignment: WrapAlignment.start,
-     runSpacing: 1.0,
-     children: list.map((e) => Container(
-       height: 100,
-       width: 100,
-       child: Text(e.toString()),
-     )).toList(),
+      direction: Axis.vertical,
+      alignment: WrapAlignment.start,
+      runSpacing: 1.0,
+      children: list
+          .map((e) => Container(
+                height: 100,
+                width: 100,
+                child: Text(e.toString()),
+              ))
+          .toList(),
+    );
+  }
+}
+
+class StackDemo extends StatelessWidget {
+  const StackDemo({Key key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: double.infinity,
+      color: Colors.grey,
+      child: Stack(
+        children: [
+          Container(
+            width: 100,
+            height: 100,
+            color: Colors.green,
+          ),
+          Container(
+            width: 50,
+            height: 50,
+            color: Colors.red,
+          )
+        ],
+      ),
     );
   }
 }
