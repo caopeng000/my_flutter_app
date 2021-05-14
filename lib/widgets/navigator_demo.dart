@@ -8,18 +8,19 @@ class LoginPage extends StatelessWidget {
         title: Text("登陆"),
       ),
       body: RaisedButton(
-        onPressed: () async {
-          var result = await Navigator.of(context).push(MaterialPageRoute(
-            builder: (context) {
-              return MenuPage(
-                title: "菜单111",
-              );
-            },
-            settings: RouteSettings(name: "menu", arguments: ""),
-            maintainState: false,
-            fullscreenDialog: false,
-          ));
-          print(result);
+        onPressed: () {
+          Navigator.of(context)
+              .push(MaterialPageRoute(
+                builder: (context) {
+                  return MenuPage(
+                    title: "菜单111",
+                  );
+                },
+                settings: RouteSettings(name: "menu", arguments: {"name":"caopeng"}),
+                maintainState: false,
+                fullscreenDialog: false,
+              ))
+              .then((value) => print(value));
         },
         child: Text("登陆"),
       ),
@@ -34,9 +35,10 @@ class MenuPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    dynamic arguments=ModalRoute.of(context).settings.arguments;
     return Scaffold(
         appBar: AppBar(
-          title: Text(title),
+          title: Text(title+"  "+arguments.toString() ),
           centerTitle: true,
         ),
         body: RaisedButton(
