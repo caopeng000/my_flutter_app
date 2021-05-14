@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:my_flutter_app/widgets/demo/demo_01.dart';
 import 'package:my_flutter_app/widgets/navigator_demo.dart';
 
-main(){
+main() {
   runApp(MyApp());
 }
 
@@ -13,7 +13,21 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: LoginPage(),
+      routes: {
+        "/": (context) => LoginPage(),
+      },
+      onGenerateRoute: (s) {
+        print(s.name);
+        switch (s.name) {
+          case "menu":
+            return MaterialPageRoute(builder: (context){
+              return MenuPage();
+            },settings: s);
+            break;
+          default:
+            break;
+        }
+      },
     );
   }
 }
@@ -33,4 +47,3 @@ class HomePage extends StatelessWidget {
     );
   }
 }
-
