@@ -165,13 +165,41 @@ class EdgeDemo extends StatelessWidget {
     //     color:Colors.black,
     //   ),
     // );
-    return SizedBox(
-      width: 100,
-      height: 100,
-      child: Container(
-        width: 200,
-        height: 10,
-        color: Colors.yellow,
+    // return SizedBox(
+    //   width: 100,
+    //   height: 100,
+    //   child: Container(
+    //     width: 200,
+    //     height: 10,
+    //     color: Colors.yellow,
+    //   ),
+    // );
+    return Container(
+      width: double.infinity,
+      margin: EdgeInsets.all(10),
+      child: DecoratedBox(
+        decoration: BoxDecoration(
+            gradient: LinearGradient(colors: [Colors.red, Colors.green]),
+            borderRadius: BorderRadius.circular(10),
+            boxShadow: [
+              BoxShadow(
+                color: Colors.black38,
+                offset: Offset(2.0,2.0),
+                blurRadius: 4
+              )
+            ]
+        ),
+
+        child: Padding(
+          padding: EdgeInsets.only(left: 100, right: 100, top: 20, bottom: 20),
+          child: Text(
+            "注册",
+            style: TextStyle(
+              color: Colors.white,
+            ),
+            textAlign: TextAlign.center,
+          ),
+        ),
       ),
     );
   }
