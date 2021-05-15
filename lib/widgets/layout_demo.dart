@@ -82,6 +82,8 @@ class StackDemo extends StatelessWidget {
     return Container(
       color: Colors.grey,
       child: Stack(
+        fit: StackFit.expand,
+        alignment:AlignmentDirectional.center,
         children: [
           Container(
             width: 100,
@@ -90,17 +92,17 @@ class StackDemo extends StatelessWidget {
           ),
           Container(
             width: 50,
-            height: 100,
+            height: 20,
             color: Colors.red,
           ),
           Positioned(
-            // width: 200,
-            // height: 200,
+            width: 20,
+            height: 10,
             child: Container(color: Colors.yellow),
-            top: 10,
-            bottom: 10,
-            left: 10,
-            right: 10,
+            // top: 10,
+            // bottom: 10,
+            // left: 10,
+            // right: 10,
           )
           // Positioned(
           //     width: 200,
