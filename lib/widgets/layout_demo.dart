@@ -80,7 +80,6 @@ class StackDemo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: double.infinity,
       color: Colors.grey,
       child: Stack(
         children: [
@@ -91,9 +90,29 @@ class StackDemo extends StatelessWidget {
           ),
           Container(
             width: 50,
-            height: 50,
+            height: 100,
             color: Colors.red,
+          ),
+          Positioned(
+            // width: 200,
+            // height: 200,
+            child: Container(color: Colors.yellow),
+            top: 10,
+            bottom: 10,
+            left: 10,
+            right: 10,
           )
+          // Positioned(
+          //     width: 200,
+          //     height: 200,
+          //     child: Container(
+          //       color: Colors.yellow
+          //     ),
+          //   top:10,
+          //   left: 10,
+          //   right: 10,
+          //   bottom: 10,
+          // )
         ],
       ),
     );
