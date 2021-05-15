@@ -3,7 +3,7 @@ import 'dart:ffi';
 import 'package:flutter/material.dart';
 
 class PageDemo extends StatefulWidget {
-  const PageDemo({Key key}) : super(key: key);
+  List<Widget> widgets = [FlutterView(), AndroidView(), IosView()];
 
   @override
   _PageDemoState createState() => _PageDemoState();
@@ -22,7 +22,7 @@ class _PageDemoState extends State<PageDemo>
         initialIndex: _index, length: tabs.length, vsync: this);
     _controller.addListener(() {
       setState(() {
-        _index=_controller.index;
+        _index = _controller.index;
       });
       print("object");
     });
@@ -54,7 +54,40 @@ class _PageDemoState extends State<PageDemo>
           tabs: tabs.map((e) => Tab(text: e)).toList(),
         ),
       ),
-      body: Text(_index.toString()),
+      body:TabBarView(children: widget.widgets,controller: _controller,),
+    );
+  }
+}
+
+class FlutterView extends StatelessWidget {
+  const FlutterView({Key key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Text("FlutterView"),
+    );
+  }
+}
+
+class AndroidView extends StatelessWidget {
+  const AndroidView({Key key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Text("AndroidView"),
+    );
+  }
+}
+
+class IosView extends StatelessWidget {
+  const IosView({Key key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Text("IosView"),
     );
   }
 }
