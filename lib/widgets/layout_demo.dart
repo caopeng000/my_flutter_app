@@ -11,7 +11,7 @@ class LayoutDemo extends StatelessWidget {
       ),
       body: Container(
         color: Colors.grey,
-        child: StackDemo(),
+        child: EdgeDemo(),
         // child: Column(
         //   children: [
         //     Container(color: Colors.red, width: 100, height: 100),
@@ -83,7 +83,7 @@ class StackDemo extends StatelessWidget {
       color: Colors.grey,
       child: Stack(
         fit: StackFit.expand,
-        alignment:AlignmentDirectional.center,
+        alignment: AlignmentDirectional.center,
         children: [
           Container(
             width: 100,
@@ -116,6 +116,62 @@ class StackDemo extends StatelessWidget {
           //   bottom: 10,
           // )
         ],
+      ),
+    );
+  }
+}
+
+class AlignDemo extends StatelessWidget {
+  const AlignDemo({Key key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      margin: EdgeInsets.all(50),
+      width: 200,
+      height: 200,
+      color: Colors.green,
+      child: Align(
+        alignment: Alignment.topRight,
+        child: FlutterLogo(
+          size: 60,
+        ),
+      ),
+    );
+  }
+}
+
+class EdgeDemo extends StatelessWidget {
+  const EdgeDemo({Key key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    // return Container(
+    //   width: 100,
+    //   height: 100,
+    //   color: Colors.red,
+    //   margin:EdgeInsets.all(10),
+    //   padding: EdgeInsets.all(20),
+    //   child: Text("data"),
+    // );
+    // return ConstrainedBox(
+    //   constraints: BoxConstraints(
+    //     maxWidth:100,
+    //     maxHeight: 100
+    //   ),
+    //   child: Container(
+    //     width: 10,
+    //     height: 500,
+    //     color:Colors.black,
+    //   ),
+    // );
+    return SizedBox(
+      width: 100,
+      height: 100,
+      child: Container(
+        width: 200,
+        height: 10,
+        color: Colors.yellow,
       ),
     );
   }
