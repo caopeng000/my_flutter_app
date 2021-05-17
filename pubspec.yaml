@@ -31,6 +31,7 @@ dependencies:
   fluro: ^2.0.3 # 路由管理工具
   english_words: ^4.0.0-0
   provider: ^4.3.2+3
+  dio: ^4.0.0
 dev_dependencies:
   flutter_test:
     sdk: flutter
