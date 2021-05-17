@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_flutter_app/widgets/bottom_navigator.dart';
 import 'package:my_flutter_app/widgets/demo/demo_01.dart';
 import 'package:my_flutter_app/widgets/demo/demo_04.dart';
 import 'package:my_flutter_app/widgets/layout_demo.dart';
@@ -18,9 +19,11 @@ class MyApp extends StatelessWidget {
       routes: {
         "/": (context) => PageDemo(),
         "layout":(context)=>LayoutDemo(),
+        "navigator":(context)=>BottomNavigatorBarDemo(),
       },
+      initialRoute: "navigator",
       theme: ThemeData(
-        primaryColor: Colors.yellow
+        primaryColor: Colors.blue
       ),
       onGenerateRoute: (s) {
         print(s.name);
