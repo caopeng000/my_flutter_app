@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_flutter_app/provider/CountProvider.dart';
 import 'package:my_flutter_app/widgets/alert_dialog_demo.dart';
 import 'package:my_flutter_app/widgets/bottom_navigator.dart';
 import 'package:my_flutter_app/widgets/card_demo.dart';
@@ -10,10 +11,16 @@ import 'package:my_flutter_app/widgets/grid_view_demo.dart';
 import 'package:my_flutter_app/widgets/layout_demo.dart';
 import 'package:my_flutter_app/widgets/listview_demo.dart';
 import 'package:my_flutter_app/widgets/navigator_demo.dart';
+import 'package:my_flutter_app/widgets/provider_demo.dart';
 import 'package:my_flutter_app/widgets/table_demo.dart';
+import 'package:provider/provider.dart';
 
 main() {
-  runApp(MyApp());
+  runApp(
+    ChangeNotifierProvider(create: (context)=>CountProvider(),
+    child: MyApp(),
+    )
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -33,9 +40,11 @@ class MyApp extends StatelessWidget {
         "table":(context)=>TableDemo(),
         "card":(context)=>CardDemo(),
         "demo05":(context)=>Demo05(),
-        "debug":(context)=>DedugDemo()
+        "debug":(context)=>DedugDemo(),
+        "provider":(context)=>ProviderDemo(),
+        "provider2":(context)=>ProviderDemoTwo(),
       },
-      initialRoute: "debug",
+      initialRoute: "provider",
       theme: ThemeData(
         primaryColor: Colors.blue
       ),

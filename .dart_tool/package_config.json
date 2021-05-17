@@ -86,10 +86,22 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "nested",
+      "rootUri": "file:///Users/caopeng/chehejia/flutter/sdk/flutter/.pub-cache/hosted/pub.flutter-io.cn/nested-1.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "path",
       "rootUri": "file:///Users/caopeng/chehejia/flutter/sdk/flutter/.pub-cache/hosted/pub.flutter-io.cn/path-1.8.0",
       "packageUri": "lib/",
       "languageVersion": "2.12"
+    },
+    {
+      "name": "provider",
+      "rootUri": "file:///Users/caopeng/chehejia/flutter/sdk/flutter/.pub-cache/hosted/pub.flutter-io.cn/provider-4.3.3",
+      "packageUri": "lib/",
+      "languageVersion": "2.7"
     },
     {
       "name": "sky_engine",
@@ -152,7 +164,7 @@
       "languageVersion": "2.7"
     }
   ],
-  "generated": "2021-05-13T09:45:05.172066Z",
+  "generated": "2021-05-17T08:54:23.653501Z",
   "generator": "pub",
   "generatorVersion": "2.12.3"
 }
