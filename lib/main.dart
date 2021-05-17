@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_flutter_app/widgets/alert_dialog_demo.dart';
 import 'package:my_flutter_app/widgets/bottom_navigator.dart';
 import 'package:my_flutter_app/widgets/demo/demo_01.dart';
 import 'package:my_flutter_app/widgets/demo/demo_04.dart';
@@ -23,9 +24,10 @@ class MyApp extends StatelessWidget {
         "layout":(context)=>LayoutDemo(),
         "navigator":(context)=>BottomNavigatorBarDemo(),
         "lv":(context)=>ListViewDemo(),
-        "grid":(context)=>GridViewDemo()
+        "grid":(context)=>GridViewDemo(),
+        "alert":(context)=>AlertDialogDemo()
       },
-      initialRoute: "grid",
+      initialRoute: "alert",
       theme: ThemeData(
         primaryColor: Colors.blue
       ),
