@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:my_flutter_app/widgets/bottom_navigator.dart';
 import 'package:my_flutter_app/widgets/demo/demo_01.dart';
 import 'package:my_flutter_app/widgets/demo/demo_04.dart';
+import 'package:my_flutter_app/widgets/grid_view_demo.dart';
 import 'package:my_flutter_app/widgets/layout_demo.dart';
 import 'package:my_flutter_app/widgets/listview_demo.dart';
 import 'package:my_flutter_app/widgets/navigator_demo.dart';
@@ -21,9 +22,10 @@ class MyApp extends StatelessWidget {
         "/": (context) => PageDemo(),
         "layout":(context)=>LayoutDemo(),
         "navigator":(context)=>BottomNavigatorBarDemo(),
-        "listview":(context)=>ListViewDemo()
+        "lv":(context)=>ListViewDemo(),
+        "grid":(context)=>GridViewDemo()
       },
-      initialRoute: "listview",
+      initialRoute: "grid",
       theme: ThemeData(
         primaryColor: Colors.blue
       ),
