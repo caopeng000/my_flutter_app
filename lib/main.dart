@@ -16,11 +16,12 @@ import 'package:my_flutter_app/widgets/table_demo.dart';
 import 'package:provider/provider.dart';
 
 main() {
-  runApp(
-    ChangeNotifierProvider(create: (context)=>CountProvider(),
+  runApp(MultiProvider(
+    providers: [
+      ChangeNotifierProvider(create:  (context) => CountProvider()),
+    ],
     child: MyApp(),
-    )
-  );
+  ));
 }
 
 class MyApp extends StatelessWidget {
@@ -32,29 +33,29 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       routes: {
         "/": (context) => PageDemo(),
-        "layout":(context)=>LayoutDemo(),
-        "navigator":(context)=>BottomNavigatorBarDemo(),
-        "lv":(context)=>ListViewDemo(),
-        "grid":(context)=>GridViewDemo(),
-        "alert":(context)=>AlertDialogDemo(),
-        "table":(context)=>TableDemo(),
-        "card":(context)=>CardDemo(),
-        "demo05":(context)=>Demo05(),
-        "debug":(context)=>DedugDemo(),
-        "provider":(context)=>ProviderDemo(),
-        "provider2":(context)=>ProviderDemoTwo(),
+        "layout": (context) => LayoutDemo(),
+        "navigator": (context) => BottomNavigatorBarDemo(),
+        "lv": (context) => ListViewDemo(),
+        "grid": (context) => GridViewDemo(),
+        "alert": (context) => AlertDialogDemo(),
+        "table": (context) => TableDemo(),
+        "card": (context) => CardDemo(),
+        "demo05": (context) => Demo05(),
+        "debug": (context) => DedugDemo(),
+        "provider": (context) => ProviderDemo(),
+        "provider2": (context) => ProviderDemoTwo(),
       },
       initialRoute: "provider",
-      theme: ThemeData(
-        primaryColor: Colors.blue
-      ),
+      theme: ThemeData(primaryColor: Colors.blue),
       onGenerateRoute: (s) {
         print(s.name);
         switch (s.name) {
           case "menu":
-            return MaterialPageRoute(builder: (context){
-              return MenuPage();
-            },settings: s);
+            return MaterialPageRoute(
+                builder: (context) {
+                  return MenuPage();
+                },
+                settings: s);
             break;
           default:
             break;
