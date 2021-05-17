@@ -41,12 +41,6 @@ class _PageDemoState extends State<PageDemo>
     return Scaffold(
       appBar: AppBar(
         title: Text("TabBar"),
-        leading: IconButton(
-          icon: Icon(Icons.add),
-          onPressed: () {
-            print("leading");
-          },
-        ),
         elevation: 20,
         centerTitle: true,
         bottom: TabBar(
@@ -54,7 +48,11 @@ class _PageDemoState extends State<PageDemo>
           tabs: tabs.map((e) => Tab(text: e)).toList(),
         ),
       ),
-      body:TabBarView(children: widget.widgets,controller: _controller,),
+      drawer: MyDrawer(),
+      body: TabBarView(
+        children: widget.widgets,
+        controller: _controller,
+      ),
     );
   }
 }
@@ -88,6 +86,29 @@ class IosView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
       child: Text("IosView"),
+    );
+  }
+}
+
+class MyDrawer extends StatelessWidget {
+  const MyDrawer({Key key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Drawer(
+      child: MediaQuery.removePadding(
+        context: context,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Padding(
+              padding: EdgeInsets.only(top: 40),
+              child: Text("data"),
+            )
+          ],
+        ),
+        removeTop: true,
+      ),
     );
   }
 }
