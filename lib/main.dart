@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:my_flutter_app/widgets/alert_dialog_demo.dart';
 import 'package:my_flutter_app/widgets/bottom_navigator.dart';
+import 'package:my_flutter_app/widgets/card_demo.dart';
 import 'package:my_flutter_app/widgets/demo/demo_01.dart';
 import 'package:my_flutter_app/widgets/demo/demo_04.dart';
 import 'package:my_flutter_app/widgets/grid_view_demo.dart';
@@ -27,9 +28,10 @@ class MyApp extends StatelessWidget {
         "lv":(context)=>ListViewDemo(),
         "grid":(context)=>GridViewDemo(),
         "alert":(context)=>AlertDialogDemo(),
-        "table":(context)=>TableDemo()
+        "table":(context)=>TableDemo(),
+        "card":(context)=>CardDemo()
       },
-      initialRoute: "table",
+      initialRoute: "card",
       theme: ThemeData(
         primaryColor: Colors.blue
       ),
