@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:my_flutter_app/widgets/alert_dialog_demo.dart';
 import 'package:my_flutter_app/widgets/bottom_navigator.dart';
 import 'package:my_flutter_app/widgets/card_demo.dart';
+import 'package:my_flutter_app/widgets/debug_demo.dart';
 import 'package:my_flutter_app/widgets/demo/demo_01.dart';
 import 'package:my_flutter_app/widgets/demo/demo_04.dart';
 import 'package:my_flutter_app/widgets/demo_05.dart';
@@ -32,8 +33,9 @@ class MyApp extends StatelessWidget {
         "table":(context)=>TableDemo(),
         "card":(context)=>CardDemo(),
         "demo05":(context)=>Demo05(),
+        "debug":(context)=>DedugDemo()
       },
-      initialRoute: "demo05",
+      initialRoute: "debug",
       theme: ThemeData(
         primaryColor: Colors.blue
       ),
