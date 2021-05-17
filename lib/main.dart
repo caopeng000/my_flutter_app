@@ -7,6 +7,7 @@ import 'package:my_flutter_app/widgets/grid_view_demo.dart';
 import 'package:my_flutter_app/widgets/layout_demo.dart';
 import 'package:my_flutter_app/widgets/listview_demo.dart';
 import 'package:my_flutter_app/widgets/navigator_demo.dart';
+import 'package:my_flutter_app/widgets/table_demo.dart';
 
 main() {
   runApp(MyApp());
@@ -25,9 +26,10 @@ class MyApp extends StatelessWidget {
         "navigator":(context)=>BottomNavigatorBarDemo(),
         "lv":(context)=>ListViewDemo(),
         "grid":(context)=>GridViewDemo(),
-        "alert":(context)=>AlertDialogDemo()
+        "alert":(context)=>AlertDialogDemo(),
+        "table":(context)=>TableDemo()
       },
-      initialRoute: "alert",
+      initialRoute: "table",
       theme: ThemeData(
         primaryColor: Colors.blue
       ),
