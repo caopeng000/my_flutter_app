@@ -18,6 +18,7 @@ class _TableDemoState extends State<TableDemo> {
       list.add({
         "name": "wang" + i.toString(),
         "gender": i % 1 == 0 ? "男" : "女",
+        "select": false
       });
     }
   }
@@ -46,12 +47,21 @@ class _TableDemoState extends State<TableDemo> {
             DataColumn(label: Text("姓名")),
             DataColumn(label: Text("性别"))
           ],
-          rows: list.map((e) => DataRow(
-              cells: [
-                DataCell(Text(e["name"])),
-                DataCell(Text(e["gender"])),
-              ]
-          )).toList(),
+          rows: list
+              .map((e) => DataRow(
+                      selected: e["select"],
+                      onSelectChanged: (v) {
+                        setState(() {
+                          if (e["select"] != v) {
+                            e["select"] = v;
+                          }
+                        });
+                      },
+                      cells: [
+                        DataCell(Text(e["name"])),
+                        DataCell(Text(e["gender"])),
+                      ]))
+              .toList(),
         ),
       ),
     );
