@@ -4,6 +4,7 @@ import 'package:my_flutter_app/widgets/bottom_navigator.dart';
 import 'package:my_flutter_app/widgets/card_demo.dart';
 import 'package:my_flutter_app/widgets/demo/demo_01.dart';
 import 'package:my_flutter_app/widgets/demo/demo_04.dart';
+import 'package:my_flutter_app/widgets/demo_05.dart';
 import 'package:my_flutter_app/widgets/grid_view_demo.dart';
 import 'package:my_flutter_app/widgets/layout_demo.dart';
 import 'package:my_flutter_app/widgets/listview_demo.dart';
@@ -29,9 +30,10 @@ class MyApp extends StatelessWidget {
         "grid":(context)=>GridViewDemo(),
         "alert":(context)=>AlertDialogDemo(),
         "table":(context)=>TableDemo(),
-        "card":(context)=>CardDemo()
+        "card":(context)=>CardDemo(),
+        "demo05":(context)=>Demo05(),
       },
-      initialRoute: "card",
+      initialRoute: "demo05",
       theme: ThemeData(
         primaryColor: Colors.blue
       ),

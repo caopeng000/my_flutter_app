@@ -9,4 +9,8 @@
     <type id="android" />
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_3" />
+  <component name="XMakeProjectSettings">
+    <option name="currentArchitecture" value="x86_64" />
+    <option name="workingDirectory" value="$PROJECT_DIR$" />
+  </component>
 </project>
