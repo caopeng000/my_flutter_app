@@ -9,6 +9,7 @@ import 'package:my_flutter_app/widgets/debug_demo.dart';
 import 'package:my_flutter_app/widgets/demo/demo_01.dart';
 import 'package:my_flutter_app/widgets/demo/demo_04.dart';
 import 'package:my_flutter_app/widgets/demo_05.dart';
+import 'package:my_flutter_app/widgets/dio_demo.dart';
 import 'package:my_flutter_app/widgets/grid_view_demo.dart';
 import 'package:my_flutter_app/widgets/layout_demo.dart';
 import 'package:my_flutter_app/widgets/listview_demo.dart';
@@ -49,9 +50,10 @@ class MyApp extends StatelessWidget {
         "debug": (context) => DedugDemo(),
         "provider": (context) => ProviderDemo(),
         "provider2": (context) => ProviderDemoTwo(),
+        "dio": (context) => DioDemo(),
         "mvvmdemo":(context)=>MvvmDemoView()
       },
-      initialRoute: "mvvmdemo",
+      initialRoute: "dio",
       theme: ThemeData(primaryColor: Colors.blue),
       onGenerateRoute: (s) {
         print(s.name);
