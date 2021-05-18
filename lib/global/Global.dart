@@ -24,13 +24,19 @@ class Global {
         },
         contentType: Headers.jsonContentType,
         responseType: ResponseType.json);
-    dio.interceptors.add(InterceptorsWrapper(onRequest: (options, handler) {
-      print("请求" + options.headers.toString());
-      print("请求" + options.extra.toString());
-    }, onResponse: (e, handler) {
-      print("返回" + e.toString());
-    }, onError: (e, handler) {
-      print("错误" + e.toString());
+    dio.interceptors.add(InterceptorsWrapper(
+        //     onRequest: (options, handler) {
+        //   print("请求" + options.headers.toString());
+        //   print("请求" + options.extra.toString());
+        // }, onResponse: (e, handler) {
+        //   print("返回" + e.toString());
+        // },
+        onError: (e, handler) {
+      if (e.type == DioErrorType.connectTimeout) {
+        print("连接超时错误");
+      } else {
+        print("错误" + e.type.toString());
+      }
     }));
   }
 }
