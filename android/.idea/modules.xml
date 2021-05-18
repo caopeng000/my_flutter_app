@@ -4,6 +4,11 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/android.iml" filepath="$PROJECT_DIR$/.idea/modules/android.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/android.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/android.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-534653995/android.flutter_plugin_android_lifecycle.iml" filepath="$PROJECT_DIR$/.idea/modules/-534653995/android.flutter_plugin_android_lifecycle.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/974826239/android.image_picker.iml" filepath="$PROJECT_DIR$/.idea/modules/974826239/android.image_picker.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1287629001/android.jpush_flutter.iml" filepath="$PROJECT_DIR$/.idea/modules/-1287629001/android.jpush_flutter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-702578057/android.path_provider.iml" filepath="$PROJECT_DIR$/.idea/modules/-702578057/android.path_provider.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1857283990/android.shared_preferences.iml" filepath="$PROJECT_DIR$/.idea/modules/1857283990/android.shared_preferences.iml" />
     </modules>
   </component>
 </project>

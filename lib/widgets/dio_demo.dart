@@ -1,5 +1,6 @@
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
+import 'package:my_flutter_app/global/Global.dart';
 
 class DioDemo extends StatefulWidget {
   const DioDemo({Key key}) : super(key: key);
@@ -9,14 +10,17 @@ class DioDemo extends StatefulWidget {
 }
 
 class _DioDemoState extends State<DioDemo> {
-  Dio _dio = Dio();
-
   @override
   void initState() {
     // TODO: implement initState
     super.initState();
-    _dio.options.baseUrl = "http://api.td0f7.cn:8083/";
-    _dio.options.connectTimeout = 1000;
+    loadData();
+  }
+
+  void loadData() async {
+    await Global.getInstance().dio.get("/dio/dio", queryParameters: {
+      "id": "33223",
+    });
   }
 
   @override
@@ -42,13 +46,5 @@ class _DioDemoState extends State<DioDemo> {
         ],
       ),
     );
-  }
-}
-
-void _try() async {
-  try {
-    print("object");
-  } catch (e) {
-
   }
 }

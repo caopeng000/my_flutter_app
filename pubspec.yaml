@@ -30,36 +30,37 @@ dependencies:
   cupertino_icons: ^1.0.2
   fluro: ^2.0.3 # 路由管理工具
   english_words: ^4.0.0-0
-
+  http_parser: 4.0.0
   dio: ^4.0.0
   # 持久化操作
-  shared_preferences: ^0.5.12+4
+#  shared_preferences: ^0.5.12+4
   # 缓存清理
   path_provider: ^1.6.27
   #图片显示，可缓存
-  ok_image: ^0.4.0
+#  ok_image: ^0.4.0
   #屏幕适配
   screen_ratio_adapter: ^1.0.0
-
-  image_picker: ^0.6.7+22
+  #  图片拍照
+  image_picker: ^0.7.5
   #  日期选择
   flutter_datetime_picker: 1.5.0
   #  图形报表
-  flutter_char_csx: ^0.0.3
+  charts_flutter: ^0.10.0
   #  RSA加密
   encrypt: ^4.0.0
   #UI框架
   weui: 0.0.8
-
+  #  左滑删除
   left_scroll_actions: ^1.5.3
   #  推送
-  jpush_flutter: 0.6.3
+#  jpush_flutter: 0.6.3
   #  图片压缩
   flutter_luban: ^0.1.11
-    #   全局状态管理
+  #   全局状态管理
   provider: ^4.3.2+3
-    #   轮播图
+  #   轮播图
   flutter_swiper: ^1.1.6
+
 dev_dependencies:
   flutter_test:
     sdk: flutter

@@ -12,6 +12,11 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/../../../sdk/flutter/.pub-cache/hosted/pub.flutter-io.cn/flutter_plugin_android_lifecycle-2.0.1/android" />
+            <option value="$PROJECT_DIR$/../../../sdk/flutter/.pub-cache/hosted/pub.flutter-io.cn/image_picker-0.7.5/android" />
+            <option value="$PROJECT_DIR$/../../../sdk/flutter/.pub-cache/hosted/pub.flutter-io.cn/jpush_flutter-0.6.3/android" />
+            <option value="$PROJECT_DIR$/../../../sdk/flutter/.pub-cache/hosted/pub.flutter-io.cn/path_provider-1.6.28/android" />
+            <option value="$PROJECT_DIR$/../../../sdk/flutter/.pub-cache/hosted/pub.flutter-io.cn/shared_preferences-0.5.12+4/android" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
